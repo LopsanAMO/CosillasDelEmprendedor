@@ -5,11 +5,11 @@ aplicacion.controller('mapa', function($scope, $http, $document) {
 	$scope.nombre;
 	$scope.descripcion;
 	$scope.latitud;
-  $scope.longitud;
-  $scope.lugares_cercanos;
+	$scope.longitud;
+	scope.lugares_cercanos;
 	$scope.historio_lugar;
-  $scope.horario;
-  $scope.costo_entrada;
+	$scope.horario;
+	$scope.costo_entrada;
 	$scope.fotos;
 
 	$scope.init = function() {
@@ -25,11 +25,11 @@ aplicacion.controller('mapa', function($scope, $http, $document) {
 			$scope.nombre = data.nombre;
 			$scope.descripcion = data.descripcion;
 			$scope.latitud = data.latitud;
-		  $scope.longitud = data.longitud;
-		  $scope.lugares_cercanos = data.lugares_cercanos;
+			$scope.longitud = data.longitud;
+			$scope.lugares_cercanos = data.lugares_cercanos;
 			$scope.historio_lugar = data.historio_lugar;
-		  $scope.horario = data.horario;
-		  $scope.costo_entrada = data.costo_entrada;
+		  	$scope.horario = data.horario;
+		  	$scope.costo_entrada = data.costo_entrada;
 			$scope.fotos = data.fotos;
 		}).
 		error(function() {

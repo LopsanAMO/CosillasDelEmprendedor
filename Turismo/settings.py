@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'places',
     'rest_framework',
+    'django.contrib.algoliasearch',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+ALGOLIA = {
+    'APPLICATION_ID': "18FVHAVRWL",
+    'API_KEY': "b12d5c50d36b45ea98d61b0f3cea4e7f"
+}
