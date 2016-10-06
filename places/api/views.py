@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import generics
 from ..models import Lugares, Foto
-from .serializers import FotosSerializer, LugaresSerializer
+from .serializers import LugaresSerializer, DangerZoneSerializer
 from utils.algoritmos import distance
 
 @api_view(['GET', 'POST'])
@@ -38,7 +38,6 @@ def lugares_con_gps(request):
 def lugares_sin_gps(request):
     if request.method == 'GET':
         lugares = Lugares.objects.all()
-        print('holaaaaaaaaaaaaaaaaaaaaaaaaa')
         try:
             serializer = LugaresSerializer(lugares, many=True)
             return Response(serializer.data)
@@ -46,4 +45,18 @@ def lugares_sin_gps(request):
             print(e)
             print(type(e))
     else:
-        print('oko')
+        print('esto no es un metodo get en lugares_sin_gps')
+
+@api_view(['GET', 'POST'])
+
+def lugares_peligrosos(request):
+    if request.method == 'GET':
+        dangers = dangerzone.objects.all()
+        try:
+            serializer = DangerZoneSerializer(dangers, many=True)
+            return Response(serializer.data)
+        except Exception as e:
+            print(e)
+            print(type(e))
+    else:
+        print('esto no es un metodo get en lugares_peligrosos')
