@@ -27,6 +27,7 @@
 	#search_bar_hidden_list{
 		margin-left: 64px;
 		width: 70%;
+		max-height: 600px;
 	}
 
 	.app_container{

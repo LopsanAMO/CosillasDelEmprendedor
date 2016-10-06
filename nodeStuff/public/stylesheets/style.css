@@ -168,7 +168,7 @@ a{text-transform: none;text-decoration: none;}
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
 	-o-border-radius: 2px;
-	-ms-border-radius: 2px;	
+	-ms-border-radius: 2px;
 }
 
 .corner_radius_trans{
@@ -176,7 +176,7 @@ a{text-transform: none;text-decoration: none;}
 	-webkit-border-radius: 20px 0 20px 0;
 	-moz-border-radius: 20px 0 20px 0;
 	-o-border-radius: 20px 0 20px 0;
-	-ms-border-radius: 0 20px 0 20px;	
+	-ms-border-radius: 0 20px 0 20px;
 }
 
 /* HORIZONTAL ALIGNMENT */
@@ -410,7 +410,7 @@ span.mini_circle{
 
 .top_search_bar input{
 	width: calc(100% - 112px);
-	height: 100%;
+	height: inherit;
 	padding-left: 24px;
 	padding-right: 24px;
 	background: transparent;
@@ -495,7 +495,7 @@ span.mini_circle{
 	position: absolute;
 	height: 100%;
 	display: block;
-	left: 50%; 
+	left: 50%;
 	top: 50%;
 	transform: translate(-50% , -50%);
 }
@@ -512,7 +512,7 @@ span.mini_circle{
 .list.searchbar_list .list_item .item_img img{
 	position: absolute;
 	display: block;
-	left: 50%; 
+	left: 50%;
 	top: 50%;
 	transform: translate(-50% , -50%);
 }
@@ -530,4 +530,9 @@ span.mini_circle{
 	max-height: 220px;
 	overflow: auto;
 	display: none;
+}
+
+#search_bar{
+	margin-top: 12px !important;
+	width: 100% !important;
 }
