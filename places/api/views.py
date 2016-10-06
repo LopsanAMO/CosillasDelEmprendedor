@@ -5,10 +5,13 @@ from rest_framework import generics
 from ..models import Lugares, Foto
 from .serializers import FotosSerializer, LugaresSerializer
 
-@api_view(['GET', 'POST'])
-
-def lugares_con_gps(request):
-
+# @api_view(['GET', 'POST'])
+#
+# def lugares_con_gps(request):
+#     if request.method = 'POST':
+#         latitud = request.GET.get('lat')
+#         longitud = request.GET.get('lon')
+#
 
 @api_view(['GET', 'POST'])
 
@@ -22,4 +25,4 @@ def lugares_sin_gps(request):
             print(e)
             print(type(e))
     else:
-        print('oko')            
+        print('oko')

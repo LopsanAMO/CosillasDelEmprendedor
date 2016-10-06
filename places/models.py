@@ -10,6 +10,12 @@ class Lugares(models.Model):
     horario = models.CharField(blank=False, null=False, max_length=100)
     costo_entrada = models.CharField(blank=False, null=False, max_length=100)
 
+    def __str__(self):
+        return "{}".format(self.nombre)
+
 class Foto(models.Model):
-    lugar = models.OneToOneField(Lugares, blank=False, null=False, related_name="fotos")
+    lugar = models.ForeignKey(Lugares, blank=False, null=False, related_name="fotos")
     foto = models.ImageField(blank=False, null=False)
+
+    def __str__(self):
+        return "Foto de lugar: {}".format(self.lugar)

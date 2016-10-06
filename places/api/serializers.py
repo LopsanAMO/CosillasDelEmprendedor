@@ -10,5 +10,5 @@ class LugaresSerializer(serializers.ModelSerializer):
     fotos = FotosSerializer(many=True)
     class Meta:
         model = Lugares
-        fields = ('')
+        fields = ('nombre','descripcion','latitud','longitud','lugares_cercanos','historio_lugar','horario','costo_entrada','fotos')
         deph = 1
