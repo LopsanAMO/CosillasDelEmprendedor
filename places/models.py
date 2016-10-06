@@ -9,6 +9,7 @@ class Lugares(models.Model):
     historio_lugar = models.CharField(blank=False, null=False, max_length=1000)
     horario = models.CharField(blank=False, null=False, max_length=100)
     costo_entrada = models.CharField(blank=False, null=False, max_length=100)
+    foto = models.ImageField(blank=False, null=False)
 
     def __str__(self):
         return "{}".format(self.nombre)

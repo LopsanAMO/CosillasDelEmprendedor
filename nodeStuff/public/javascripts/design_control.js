@@ -34,7 +34,7 @@ jQuery(document).ready(function(){
 	jQuery('#search_bar').autocomplete({ hint: false }, [
 		{
 			source: jQuery.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-			displayKey: 'nombre',
+			displayKey: 'nombre, descripcion',
 			templates: {
 				suggestion: function(suggestion) {
 					if(jQuery('#search_bar').val() === ''){
@@ -51,7 +51,7 @@ jQuery(document).ready(function(){
 							  '    <div class="layout_padding_hmax">' + '\n' +
 							  '      <h3 class="layout_margin_bottom_min">' + suggestion._highlightResult.nombre.value + '</h3>' + '\n' +
 							  '      <div class="col-md1 txt_density_bold font_color_light">Descripcion</div>' + '\n' +
-							  '      <div class="col-md1">' + 'Hola' +'</div>' + '\n' +
+							  '      <div class="col-md1">' + suggestion._highlightResult.descripcion.value +'</div>' + '\n' +
 							  '    </div>' + '\n' +
 							  '  </div>' + '\n' +
 							  '</div>' + '\n' +

@@ -44,10 +44,10 @@
           $('#search-input').autocomplete({ hint: false }, [
             {
               source: $.fn.autocomplete.sources.hits(index, { hitsPerPage: 5 }),
-              displayKey: 'nombre',
+              displayKey: 'descripcion',
               templates: {
                 suggestion: function(suggestion) {
-                  return suggestion._highlightResult.nombre.value;
+                  return suggestion._highlightResult.descripcion.value;
                 }
               }
             }
