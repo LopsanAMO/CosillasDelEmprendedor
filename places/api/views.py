@@ -2,7 +2,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
 from rest_framework import generics
-from ..models import Lugares, Foto
+from ..models import Lugares, dangerzone
 from .serializers import LugaresSerializer, DangerZoneSerializer
 from utils.algoritmos import distance
 
