@@ -15,5 +15,6 @@ $ npm start
 # Instalar los requerimientos para Django
 ```bash
 $ pip install -r requerimientos.txt
+$ pip install django-cors-headers
 ```
 
