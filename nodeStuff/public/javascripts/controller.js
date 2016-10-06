@@ -23,7 +23,7 @@ aplicacion.controller('mapa', function($scope, $http, $document) {
 		}).
 		success(function(data) {
 			$scope.nombre = data[0].nombre;
-			console.log($scope.nombre);
+			console.log(data);
 			$scope.descripcion = data[0].descripcion;
 			$scope.latitud = data[0].latitud;
 		  $scope.longitud = data[0].longitud;
@@ -31,7 +31,7 @@ aplicacion.controller('mapa', function($scope, $http, $document) {
 			$scope.historio_lugar = data[0].historio_lugar;
 		  $scope.horario = data[0].horario;
 		  $scope.costo_entrada = data[0].costo_entrada;
-			$scope.fotos = data[0].fotos;
+			$scope.fotos = data[0].fotos[0];
 		}).
 		error(function() {
 			alert('Error obteniendo lo del mapa');
