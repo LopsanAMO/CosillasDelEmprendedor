@@ -11,5 +11,5 @@ class Lugares(models.Model):
     costo_entrada = models.CharField(blank=False, null=False, max_length=100)
 
 class Foto(models.Model):
-    lugar = models.OneToOneField(Lugares, blank=False, null=False)
+    lugar = models.OneToOneField(Lugares, blank=False, null=False, related_name="fotos")
     foto = models.ImageField(blank=False, null=False)
