@@ -14,15 +14,18 @@ def lugares_con_gps(request):
         # longitud = request.GET.get('lon')
         lugar_gps_lat = -99.1209097
         lugar_gps_lon = 19.4133171
+        lugares_rango = []
         #lugar_gps_obj = Lugares.objects.all().filter(longitud=lugar_gps_lon).filter(latitud=lugar_gps_lat)
         lugares = Lugares.objects.all()
         for i in range(len(lugares)):
-            latitud2 = float(lugares.latitud)
-            longitud2 = float(lugares.latitud)
-
-            print('la wea intensificada')
+            latitud2 = float(lugares[i].latitud)
+            longitud2 = float(lugares[i].longitud)
+            distancia = distance(lugar_gps_lat, lugar_gps_lon, latitud2, longitud2)
+            if distancia <= 3:
+                lugares_rango.append(lugares[i].nombre)
+        lugares_obtenidos = Lugares.objects.all().filter(nombre__in=lugares_rango)
         try:
-            serializer = LugaresSerializer(lugares, many=True)
+            serializer = LugaresSerializer(lugares_obtenidos, many=True)
             return Response(serializer.data)
         except Exception as e:
             print(e)
