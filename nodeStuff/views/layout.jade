@@ -1,9 +1,27 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
-    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
-    script(src="javascripts/controller.js")
-  body
-    block content
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/style_resp.css')
+		//- script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
+		script(src="/javascripts/jquery.js")
+		//- script(src="/javascripts/controller.js")
+		script(src="/javascripts/design_control.js")
+	body.bg_lightgray
+		.app_bar.shadow_trans.bg_white
+			.top_search_bar.bg_lightgray.rounded_trans
+				input(type="text", name="", id="search_bar", placeholder="¿Qué estas buscando?")
+				button.icon_gray
+			.col-md1.shadow_trans#search_bar_hidden_list
+				.line_separator(style="background-color: #e0e0e0;")
+				.col-md1.list.searchbar_list.bg_white
+					.col-md1.list_item.hover_item.selectable(ng-repeat="")
+						.item_img
+							img(src="http://www.wikimexico.com/storage/app/uploads/public/559/98a/eb4/55998aeb4b3e8171992098.jpg")
+						.item_info
+							.layout_padding_hmax
+								h3.layout_margin_bottom_min Lugar
+								.col-md1 Ciudad
+								.col-md1 País
+		block content

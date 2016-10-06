@@ -1,0 +1,59 @@
+@media screen and (min-width: 710px){
+	.title_b{
+		font-size: 48px;
+	}
+
+	.col-md2{
+		width: 50%;
+	}
+
+	.col-md3{
+		width: 50%;
+	}
+
+	/*--------------------------------------------------------------------------------------------------
+		MAIN ELEMENTS
+	--------------------------------------------------------------------------------------------------*/
+
+	.top_search_bar{
+		margin-left: 64px;
+		width: 70%;
+	}
+
+	.top_search_bar input{
+		font-size: 18px;
+	}
+
+	#search_bar_hidden_list{
+		margin-left: 64px;
+		width: 70%;
+	}
+
+	.app_container{
+		width: 80%;
+		margin: 48px auto;
+	}
+
+	.list.searchbar_list .list_item .item_img{
+		width: 200px;
+	}
+
+	.list.searchbar_list .list_item .item_info{
+		width: calc(100% - 200px);
+	}
+
+}
+
+@media screen and (min-width: 1120px){
+	.title_b{
+		font-size: 56px;
+	}
+
+	.col-md3{
+		width: 33.333333%;
+	}
+	.col-md4{
+		width: 25%;
+	}
+
+}

@@ -1,19 +1,74 @@
 extends layout
 
 block content
-  div(ng-app="aplicacion", ng-controller="mapa", ng-init="init()")
-  h1= title
-  p BIenvenuto o como se escriba to #{title}
-  ul
-    li {{nombre}}
-    li {{descripcion}}
-    li {{latitud}}
-    li {{longitud}}
-    li {{lugares_cercanos}}
-    li {{historio_lugar}}
-    li {{horario}}
-    li {{costo_entrada}}
-    li {{fotos.id}}
-    li {{fotos.foto}}
-    li {{fotos.lugar}}
+    .welcome_block
+        .inner_block.slider_container
+            .block_element.slider_item
+                img(src="https://www.cityexpress.com/sites/default/files/los-10-monumentos-mas-impresionantes-de-mexico.jpg")
+                .col-md1.absolute_position.bg_trans_medium(style="height: 100%;")
+                .col-md1.v_center_block.font_color_white
+                    .txt_shadow.txt_align_center
+                        h1.title_b ¡Bienvenido a México!
+                        h1.txt_density_light Da un vistazo a muchas posibilidades
+            .block_element.slider_item
+                img(src="http://lascaniophoto.com/wp-content/uploads/2014/07/2012_Pano_Monumento_Revolucion_DF-4.jpg")
+                .col-md1.absolute_position.bg_trans_medium(style="height: 100%;")
+                .col-md1.v_center_block.font_color_white
+                    .txt_shadow.txt_align_center
+                        h1.title_b ¡Disfurta de maravillosos lugares!
+                        h1.txt_density_light Sin correr peligro
+            .block_element.slider_item
+                img(src="https://arkeopatias.files.wordpress.com/2011/08/ancient_mayan_ruins_chichen_itza_mexico1.jpg")
+                .col-md1.absolute_position.bg_trans_medium(style="height: 100%;")
+                .col-md1.v_center_block.font_color_white
+                    h1.title_b.txt_shadow.txt_align_center
+                        | Disfruta de nuevas experiencias 
+    .app_container
+        .col-md1
+            .layout_margin_bottom.font_color_light
+                h1 Recomendaciones
+        .col-md1.rec_cont
+            .col-md2(ng-repeat="")
+                .layout_padding
+                    .col.bg_white.shadow_trans.selectable
+                        .img_container.bg_darkgray
+                            img(src="http://3.bp.blogspot.com/-6a_Mz5BH9eM/UsB01riaB8I/AAAAAAAAHPk/Qbko2XnTvaM/s1600/Palenque+Mexico.JPG")
+                            .col-md1.absolute_position.bg_trans_medium(style="height: 100%;")
+                            .col-md1.v_center_block.font_color_white
+                                h1.txt_shadow.txt_align_center.txt_density_light Palenque 
+                        .layout_padding
+                            h3.font_color_light Chiapas
+
+        div(style="height: 100px;")
+
+        .col-md1
+            .layout_margin_bottom.font_color_light
+                h1 Lista para busquedas
+        .col-md1.list.searchbar_list.bg_white
+            .col-md1.list_item.hover_item.selectable(ng-repeat="")
+                .item_img
+                    img(src="http://www.wikimexico.com/storage/app/uploads/public/559/98a/eb4/55998aeb4b3e8171992098.jpg")
+                .item_info
+                    .layout_padding_hmax
+                        h3.layout_margin_bottom_min Lugar
+                        .col-md1 Ciudad
+                        .col-md1 País
+
+        div(style="height: 100px;")
+
+        div(ng-app="aplicacion", ng-controller="mapa", ng-init="init()")
+        h1= title
+        p BIenvenuto o como se escriba to #{title}
+        ul
+        li {{nombre}}
+        li {{descripcion}}
+        li {{latitud}}
+        li {{longitud}}
+        li {{lugares_cercanos}}
+        li {{historio_lugar}}
+        li {{horario}}
+        li {{costo_entrada}}
+        li {{fotos.id}}
+        li {{fotos.foto}}
+        li {{fotos.lugar}}
       
