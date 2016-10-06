@@ -5,11 +5,11 @@ aplicacion.controller('mapa', function($scope, $http, $document) {
 	$scope.nombre;
 	$scope.descripcion;
 	$scope.latitud;
-  $scope.longitud;
-  $scope.lugares_cercanos;
+	$scope.longitud;
+	scope.lugares_cercanos;
 	$scope.historio_lugar;
-  $scope.horario;
-  $scope.costo_entrada;
+	$scope.horario;
+	$scope.costo_entrada;
 	$scope.fotos;
 
 	$scope.init = function() {
@@ -22,6 +22,7 @@ aplicacion.controller('mapa', function($scope, $http, $document) {
 			url: 'http://localhost:8000/lugares/lugares/?format=json'
 		}).
 		success(function(data) {
+<<<<<<< HEAD
 			$scope.nombre = data[0].nombre;
 			console.log(data);
 			$scope.descripcion = data[0].descripcion;
